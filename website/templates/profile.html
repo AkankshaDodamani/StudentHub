@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="../static/css/output.css">
+    <style>
+      @media (max-width:640px){
+        #profile{
+          display: inline-block;
+        }
+        #info{
+          margin-top: 50px;
+          font-size: xx-small;
+        }
+      }
+    </style>
+</head>
+<body class="font-Quicksand">
+    <!-- Border -->
+  <div class="bg-teal-700 h-10"></div>
+    <!-- Navbar -->
+  <div class="font-Poppins font-semibold bg-slate-200 sticky top-0">
+    <nav class="flex justify-between place-items-center w-[92%] h-[12vh] mx-auto"> 
+      <!-- hamburger & Menu items-->
+      <div id="nav-Links" class="duration-1000 mmd:static absolute bg-slate-200 mmd:min-h-fit min-h-[50vh] left-0 top-[-600%] mmd:w-auto w-full flex items-center px-5">
+        <ul class="flex mmd:flex-row flex-col mmd:items-center mmd:gap-[4vw] gap-8">
+          <li class="text-xl hover:cursor-pointer hover:text-teal-600"><a href="index.html">HOME</a></li>
+          <li class="text-xl hover:cursor-pointer hover:text-teal-600"><a href="about.html">ABOUT</a></li>
+          <li class="text-xl hover:cursor-pointer hover:text-teal-600"><a href="index.html#leads">LEADS</a></li>
+          <li class="text-xl hover:cursor-pointer hover:text-teal-600"><a href="index.html#contact">CONTACT US</a></li>
+        </ul>
+      </div>
+      <!-- submit button -->
+      <div class="flex items-center gap-6">
+        <button class="hover:cursor-pointer bg-gradient-to-tr from-[#19B3C3] to-[#B8FF81] h-10 px-5 text-2xl rounded-2xl"><a href="sign_up.html">SIGN OUT</a></button>
+        <i onclick="onToggleMenu(this)" class='bx bx-menu bx-md text-yellow-500 cursor-pointer mmd:hidden'></i>
+      </div>
+    </nav> 
+  </div>
+
+  <!-- profile -->
+  <div id="profile" class="grid xs:grid xs:grid-cols-2 xs:justify-start xs:items-start xs:text-center xs:text-xl px-16 py-1">
+      <!-- left side -->
+    <div id="identity" class="grid gap-3 justify-items-center items-center text-center shadow-xl shadow-gray-400 bg-teal-400 py-4 rounded-3xl text-white">
+      <img src="../dist/img/user.png">
+        <div class="grid grid-rows-5 justify-self-start items-center">
+          <h1>Full Name : {{name()}} </h1>
+          <h1>Email : </h1>
+          <h1>Phone : </h1>
+          <h1>PRN : </h1>
+        </div>
+    </div>
+        <!-- right side -->
+    <div id="info" class="grid justify-center items-center">
+      <h1 class="text-4xl text-teal-600"><i class='bx bx-copy-alt'></i>INDIVIDUAL PERFORMANCE</h1>
+      <div class="bg-gray-300 w-full h-px mt-3"></div>
+    </div>
+  </div>
+
+    <!-- footer -->
+  <div class="bg-cyan-900 grid justify-center items-center mt-10">
+    <div id="footer" class="grid grid-cols-5 justify-center items-center py-5">
+      <a href="#">
+        <i class='bx bx-envelope bx-md text-white'></i>
+      </a>
+      <a href="#">
+        <i class='bx bxl-instagram bx-md text-white'></i>
+      </a>
+      <a href="#">
+        <i class='bx bxl-facebook-circle bx-md text-white'></i>
+      </a>
+      <a href="#">
+        <i class='bx bx-phone-call bx-md text-white'></i>
+      </a>
+        <span class="text-slate-200 text-2xl">-follow us</span>
+    </div>
+  </div>
+  <script>
+    const navLinks = document.getElementById('nav-Links');
+    function onToggleMenu(e){
+      e.className = e.className === 'bx bx-x bx-md text-yellow-500' ? 'bx bx-menu bx-md text-yellow-500 cursor-pointer' : 'bx bx-x bx-md text-yellow-500';
+      navLinks.classList.toggle("top-[100%]");
+    }
+  </script>
+</body>
+</html>

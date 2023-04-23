@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="../static/css/output.css">
+  <link rel="shortcut icon" type="image/jpg" href="../static/img/Logo.jpg">
+  <style>
+    @media (max-width: 768px){
+      #img{
+        height: 0px;     
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#CBEDD5]"> 
+  <!-- login -->
+  <div id="content" class="flex flex-row justify-center items-center h-screen">
+    <img id="img" src="../static/img/sign_in.jpg" class="h-[80%]">
+    <!-- form -->
+    <form class="px-20 h-[80%] shadow-2xl bg-slate-100 grid justify-center items-center text-center" action="/signin" method="post">
+      <div id="logo" class="flex flex-row text-center justify-center items-center">
+        <img id="img" src="../static/img/Logo.jpg" class="w-14 h-14">
+        <label id="heading" class="p-3 text-yellow-500 text-3xl">STUDENT HUB</label>
+    </div>
+      <h1 class="text-teal-600 text-xl py-4">Sign into your account</h1>
+      <!-- username -->
+      <div class="flex justify-center items-center py-5">
+        <i class='text-teal-600 pr-3 bx bxs-user bx-sm'></i>
+        <input id="username" class="text-xl border-solid border-b-2 border-b-emerald-500 outline-none bg-transparent" type="text" name="prn" placeholder="Enter your prn" required="8">
+      </div>
+      <!-- Password -->
+      <div class="flex justify-center items-center py-5">
+        <i class='text-teal-600 pr-3 bx bxs-lock bx-sm'></i>
+        <input id="password" class="text-xl border-solid border-b-2 border-b-emerald-500 outline-none bg-transparent" name="pwd" type="password" placeholder="Enter your pin" required="8">
+      </div>
+      <!-- Submit button -->
+      <div id="Submit">
+        <button class="m-6 w-36 h-14 bg-slate-200 text-2xl text-green-600 rounded-full shadow-gray-300 shadow-lg hover:bg-teal-500 hover:text-white" onclick="login()">SIGN IN</button>
+      </div>
+      <!-- Social media links -->
+      <div class="xs:grid grid-cols-3 gap-x-5 justify-center px-5">
+        <button type="button" class="bg-teal-500 rounded-full shadow-md shadow-teal-600">
+          <i class='bx bxl-facebook bx-sm text-white p-2'></i>
+        </button>
+        <button type="button" class="bg-teal-500 rounded-full shadow-md shadow-teal-600">
+          <i class='bx bxl-instagram-alt bx-sm text-white p-2'></i>
+        </button>
+        <button type="button" class="bg-teal-500 rounded-full shadow-md shadow-teal-600">
+          <i class='bx bxl-gmail bx-sm text-white p-2'></i>
+        </button>
+      </div>
+      <!-- Forget password -->
+      <div class="my-2 text-md text-lime-700 hover: -translate-x-1 hover:scale-110 duration-300"><a href="#">Forgot Password??</a></div>
+    </form>      
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- Toogle
+  dark:bg-gray-700
+<div class="flex justify-end m-5">
+  <input type="checkbox" id="toogle" value="yes" class="hidden">
+  <label for="toogle">
+  <div class="w-11 h-6 flex items-center bg-cyan-800 rounded-full p-1 cursor-pointer dark:bg-slate-200">
+    <div class="toogle-dot w-5 h-5 bg-white rounded-full shadow-md transform"></div>
+  </div></label>
+</div> -->
