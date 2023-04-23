@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand:wght@600&display=swap" rel="stylesheet">
+  <title>Home</title>
+  <link rel="stylesheet" href="../static/css/output.css">
+  <link rel="shortcut icon" type="image/jpg" href="../static/img/Logo.jpg">
+  
+  <style>
+    @media (max-width:768px){
+    /* home */
+    #home, #img{
+      display: block;
+    }
+    img, #heading{
+      display: none;
+    }
+    }
+    @media (max-width:640px){
+    /* footer */
+    #footer{
+      display: inline;
+    }
+    /* Contact */
+    #contact_us{
+      display: inline;
+      text-align: center;
+      font-size: x-large;
+    }
+    }
+    @media (max-width: 480px){
+    /* Contact */
+    #contact{
+      display: inline;
+      text-align: center;
+    }
+    }
+  </style>
+
+
+</head>
+
+
+
+<body class="font-Quicksand">
+    <!-- Border -->
+    <div class="bg-teal-700 h-10"></div>
+    <!-- Navbar -->
+    <div class="font-Poppins font-semibold bg-slate-200 sticky top-0">
+      <nav class="flex justify-between place-items-center w-[92%] h-[12vh] mx-auto"> 
+        <!-- logo -->
+        <div id="logo" class="flex flex-row text-center justify-center items-center">
+          <img id="img" src="../static/img/Logo.jpg" class="w-14 h-14">
+          <label id="heading" class="p-3 text-yellow-500 text-3xl">STUDENT HUB</label>
+        </div>
+        <!-- hamburger & Menu items-->
+        <div id="nav-Links" class="duration-1000 mmd:static absolute bg-slate-200 mmd:min-h-fit min-h-[50vh] left-0 top-[-600%] mmd:w-auto w-full flex items-center px-5">
+          <ul class="flex mmd:flex-row flex-col mmd:items-center mmd:gap-[4vw] gap-8">
+            <li class="text-xl hover:cursor-pointer hover:text-teal-600"><a href="home">HOME</a></li>
+            <li class="text-xl hover:cursor-pointer hover:text-teal-600"><a href="about">ABOUT</a></li>
+            <li class="text-xl hover:cursor-pointer hover:text-teal-600"><a href="#leads">LEADS</a></li>
+            <li class="text-xl hover:cursor-pointer hover:text-teal-600"><a href="#contact_us">CONTACT US</a></li>
+          </ul>
+        </div>
+        <!-- sign in button -->
+        <div class="flex items-center gap-6">
+          <button class="hover:cursor-pointer bg-gradient-to-tr from-[#19B3C3] to-[#B8FF81] h-10 px-5 text-2xl rounded-2xl"><a href="signin">SIGN IN</a></button>
+          <i onclick="onToggleMenu(this)" class='bx bx-menu bx-md text-yellow-500 cursor-pointer mmd:hidden'></i>
+        </div>
+      </nav> 
+    </div>
+    <!-- Content -->
+    <div id="home" class="bg-gradient-to-r from-[#bbf7bd] to-[#0A9DAD] grid grid-cols-2 justify-center items-center text-center gap-x-10">
+      <!-- left side -->
+      <div class="grid bg-gradient-to-r from-transparent to-[#ffffff29] rounded-full">
+        <img class="w-full h-full" src="../static/img/home_img.jpg">
+      </div>
+      <!-- right side -->
+      <div class="grid justify-start items-center pt-5">
+        <h1 class="text-5xl text-blue-100">Welcome</h1>
+        <p class="text-2xl text-white">The place where you can publish your academic and interests awards & have 
+        access</p>
+        <p class="text-4xl text-yellow-400">ANYTIME! ANYWHERE!</p>
+        <!-- graph -->
+        <div class="grid justify-items-center">
+          <label class="text-xl">OVERALL BRANCH</label>
+          <div class="bg-slate-100 w-[70%] m-3 h-5 rounded-full">
+            <div class="bg-yellow-400 w-[89%] h-5 rounded-full">89%</div>
+          </div>
+          <label class="text-xl">ACADEMICS</label>
+          <div class="bg-slate-100 w-[70%] m-3 h-5 rounded-full">
+            <div class="bg-yellow-400 w-[100%] h-5 rounded-full">100%</div>
+          </div>
+          <label class="text-xl">INTERNSHIPS</label>
+          <div class="bg-slate-100 w-[70%] m-3 h-5 rounded-full">
+            <div class="bg-yellow-400 w-[36%] h-5 rounded-full">36.76%</div>
+          </div>
+          <label class="text-xl">CO-CURRICULUM</label>
+          <div class="bg-slate-100 w-[70%] m-3 h-5 rounded-full">
+            <div class="bg-yellow-400 w-[19%] h-5 rounded-full">19.11%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- next content -->
+    <div id="leads" class="py-[5rem] grid justify-items-center items-center text-center">
+      <div class="container bg-white shadow-gray-400 shadow-lg mb-2 w-[80%]">
+        <h1 class="p-2 text-2xl xs:text-4xl font-Quicksand">LET'S SEE OUR ACHIEVERS</h1>
+      </div>
+      <div id="ranks" class="grid mt-10 mx-5">
+        <table>
+          <thead class="bg-neutral-200">
+            <tr class="grid grid-cols-4 p-3 justify-center items-center text-center text-2xl">
+              <th>RANKS</th>
+              <th>ACADEMICS</th>
+              <th>INTERNSHIPS</th>
+              <th>CO-CURRICULUM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 1st row -->
+            <tr class="grid grid-cols-4 p-3 justify-center items-center text-center text-2xl">
+              <th>1</th>
+              <th>Pradeep Rajeshkumar</th>
+              <th>Utekar Sachet Sandeep</th>
+              <th>Shravani Sunil Veer</th>
+            </tr>
+            <!-- 2nd row -->
+            <tr class="grid grid-cols-4 p-3 justify-center items-center text-center text-2xl">
+              <th>2</th>
+              <th>Utekar Sachet Sandeep</th>
+              <th>Rajput Saakshi Nathsingh</th>
+              <th>Chinmay Vaity</th>
+            </tr>
+            <!-- 3rd row -->
+            <tr class="grid grid-cols-4 p-3 justify-center items-center text-center text-2xl">
+              <th>3</th>
+              <th>Sawant Pranjali Shailendra</th>
+              <th>Prithvi Poojari</th>
+              <th>Manas Pratap Tare</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+    <!-- contact -->
+    <div class="w-[85%] h-px mx-16 bg-gray-400"></div>
+    <div id="contact_us" class="py-20 px-14 font-Quicksand">
+      <div class="text-2xl text-orange-300">Contact Us</div>
+      <p class="text-4xl">Have any queries??? Get in touch with us.</p>
+      <div id="contact" class="grid grid-cols-3 justify-start items-start my-14">
+        <div class="p-3">
+        <img src="../static/img/location.png" class="w-16 h-16">
+        <p class="text-slate-500 text-xl">SIES GST, Nerul<br>Maharashtra, India<br>400602</p>
+        </div>
+        <div class="p-3">
+        <img src="../static/img/call.png" class="w-16 h-16">
+        <p class="text-slate-500 text-xl">(91)6108 2402 / 6108 2417
+          <br>/ 6108 2418 / 6108 2419 <br>/ 6108 2427</p>
+        </div>
+        <div class="p-3">
+        <img src="../static/img/call.png" class="w-16 h-16">
+        <p class="text-slate-500 text-xl">www.siesgst.edu.in</p>
+      </div>
+      </div>
+    </div>
+
+    
+    <!-- footer -->
+    <div class="bg-cyan-900 grid justify-center items-center">
+      <div id="footer" class="grid grid-cols-5 justify-center items-center py-5">
+        <a href="#">
+          <i class='bx bx-envelope bx-md text-white'></i>
+        </a>
+        <a href="#">
+          <i class='bx bxl-instagram bx-md text-white'></i>
+        </a>
+        <a href="#">
+          <i class='bx bxl-facebook-circle bx-md text-white'></i>
+        </a>
+        <a href="#">
+          <i class='bx bx-phone-call bx-md text-white'></i>
+        </a>
+        <span class="text-slate-200 text-2xl">-follow us</span>
+      </div>
+    </div>
+    <script>
+      // hamburger
+      const navLinks = document.getElementById('nav-Links');
+      function onToggleMenu(e){
+        e.className = e.className === 'bx bx-x bx-md text-yellow-500' ? 'bx bx-menu bx-md text-yellow-500 cursor-pointer' : 'bx bx-x bx-md text-yellow-500';
+        navLinks.classList.toggle("top-[100%]");
+      }
+    </script>
+</body>
+</html
